@@ -1,10 +1,57 @@
-<mvc:View controllerName="wizard-poc.controller.main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m">
-	<App>
-		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
-			</Page>
-		</pages>
-	</App>
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:m="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	controllerName="wizard-poc.controller.main" displayBlock="true">
+	<m:App>
+		<m:NavContainer id="navContainer">
+		<m:pages>
+				<m:Page title="{i18n>title}">
+					<m:content>
+						<m:Wizard id="_id_wizard" complete="onComplete" stepActivate="onStep" finishButtonText="{i18n>btnReview}" showNextButton="true" height="80%">
+							<m:WizardStep id="idWizStp1" validated="true" title="{i18n>wizardStep1Title}" nextStep="onCompleteStep1">
+								<m:Text text="Please enter your identity"/>
+								<form:SimpleForm id="idForm" editable="true">
+									<m:Label text="Name" required="true" />
+									<m:Input id="strName" value="{Identity>/name}"></m:Input>
+									<m:Label text="Gender" required="true" />
+									<m:Select selectedKey="{Identity>/gender}">
+										<core:Item key="F" text="Female"></core:Item>
+										<core:Item key="M" text="Male"></core:Item>
+									</m:Select>
+								</form:SimpleForm>
+							</m:WizardStep>
+							<m:WizardStep id="idWizStp2" validated="true" title="{i18n>wizardStep2Title}" activate="onStep2Activate">
+								<form:SimpleForm id="contactForm">
+									<m:Label text="Address" required="true" />
+									<m:Input id="strAddress" value="{Contact>/address}"/>
+									<m:Label text="State" required="true" />
+									<m:Select selectedKey="{Contact>/state}">
+										<core:Item key="A" text="Perak"></core:Item>
+										<core:Item key="B" text="Selangor"></core:Item>
+										<core:Item key="C" text="Pahang"></core:Item>
+										<core:Item key="D" text="Kedah"></core:Item>
+										<core:Item key="K" text="Kelantan"></core:Item>
+										<core:Item key="J" text="Johor"></core:Item>
+									</m:Select>
+								</form:SimpleForm>
+							</m:WizardStep>
+							<m:WizardStep id="idWizStp3" validated="true" title="{i18n>wizardStep3Title}">
+								<m:Label text="{Identity>/name}" />
+								<m:Label text="{Identity>/gender}" />
+								<m:Label text="{Contact>/address}" />
+								<m:Label text="{Contact>/state}" />
+							</m:WizardStep>
+						</m:Wizard>
+						<m:VBox width="100%" height="20%" direction="Column" id="__vbox0">
+						    <m:items>
+						        <m:Label text="{debug>/message}" width="100%" id="__label0"/>
+						    </m:items>
+						</m:VBox>
+					</m:content>
+				</m:Page>
+			</m:pages>
+		</m:NavContainer>
+		</m:App>
 </mvc:View>
