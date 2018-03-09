@@ -18,6 +18,14 @@
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/open-weather-api",
+      "target": {
+        "type": "destination",
+        "name": "openweather"
+      },
+      "description": "Pharma Center Backend Service"
     }
   ],
   "sendWelcomeFileRedirect": true

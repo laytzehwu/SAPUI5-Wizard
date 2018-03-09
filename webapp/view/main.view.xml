@@ -37,6 +37,9 @@
 									</m:Select>
 								</form:SimpleForm>
 							</m:WizardStep>
+							<m:WizardStep id="idWizStp4" validated="true" title="{i18n>wizardStep4Title}">
+								<mvc:XMLView viewName="wizard-poc.view.LocationFinder"/>
+							</m:WizardStep>	
 							<m:WizardStep id="idWizStp3" validated="true" title="{i18n>wizardStep3Title}">
 								<m:Label text="{Identity>/name}" />
 								<m:Label text="{Identity>/gender}" />
