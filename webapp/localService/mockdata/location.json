@@ -1,0 +1,44 @@
+{  
+   "coord":{  
+      "lon":102.94,
+      "lat":1.85
+   },
+   "weather":[  
+      {  
+         "id":500,
+         "main":"Rain",
+         "description":"light rain",
+         "icon":"10d"
+      }
+   ],
+   "base":"stations",
+   "main":{  
+      "temp":304.043,
+      "pressure":1016.07,
+      "humidity":74,
+      "temp_min":304.043,
+      "temp_max":304.043,
+      "sea_level":1019.03,
+      "grnd_level":1016.07
+   },
+   "wind":{  
+      "speed":3.81,
+      "deg":56.0003
+   },
+   "rain":{  
+      "3h":1.995
+   },
+   "clouds":{  
+      "all":32
+   },
+   "dt":1520587403,
+   "sys":{  
+      "message":0.01,
+      "country":"MY",
+      "sunrise":1520550961,
+      "sunset":1520594487
+   },
+   "id":1732687,
+   "name":"Batu Pahat",
+   "cod":200
+}

@@ -59,7 +59,7 @@ sap.ui.define([
 		onSearch: function () {
 			var oData = this.getView().getModel("searcher").getData();
 			var searchKey = oData.searchKey || "";
-			var sURL = "/open-weather-api?appid=" + this.appid;
+			var sURL = "/api/open-weather-api/location?appid=" + this.appid;
 			sURL += "&q=" + searchKey;
 			var q = new JSONModel(sURL);
 			var me = this;

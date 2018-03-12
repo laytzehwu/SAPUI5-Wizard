@@ -9,7 +9,12 @@
    		<m:content>
          <m:Text text="Location: {searcher>/location/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
          <m:Text text="Country: {searcher>/location/country}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-         <m:Text text="Coord: {searcher>/location/Coord/lon} vs {searcher>/location/Coord/lat}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+         <m:Link
+        	text="Coord: lon:{searcher>/location/coord/lon} lat:{searcher>/location/coord/lat}"
+        	class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"
+        	target="_blank"
+        	href="https://www.google.com.my/maps/@{searcher>/location/coord/lat},{searcher>/location/coord/lon},10z"
+         />
    		</m:content>
    </m:Panel>
 </mvc:View>

@@ -1,0 +1,42 @@
+{  
+   "coord":{  
+      "lon":101.08,
+      "lat":4.59
+   },
+   "weather":[  
+      {  
+         "id":803,
+         "main":"Clouds",
+         "description":"broken clouds",
+         "icon":"04d"
+      }
+   ],
+   "base":"stations",
+   "main":{  
+      "temp":306.15,
+      "pressure":1006,
+      "humidity":49,
+      "temp_min":306.15,
+      "temp_max":306.15
+   },
+   "visibility":10000,
+   "wind":{  
+      "speed":4.1,
+      "deg":240
+   },
+   "clouds":{  
+      "all":75
+   },
+   "dt":1520578800,
+   "sys":{  
+      "type":1,
+      "id":8130,
+      "message":0.0025,
+      "country":"MY",
+      "sunrise":1520551459,
+      "sunset":1520594885
+   },
+   "id":1734634,
+   "name":"Ipoh",
+   "cod":200
+}
