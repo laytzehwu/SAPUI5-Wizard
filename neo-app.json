@@ -18,6 +18,14 @@
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/api/open-weather-api/location",
+      "target": {
+        "type": "destination",
+        "name": "openweather"
+      },
+      "description": "Open Weather Service"
     }
   ],
   "sendWelcomeFileRedirect": true

@@ -1,0 +1,20 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="wizard-poc.controller.LocationFinder">
+	<m:Panel headerText="{i18n>wizardStep4Header}" class="sapUiResponsiveMargin" width="auto">
+      <m:content>
+         <m:Button text="{i18n>search}" press="onSearch" class="myAppDemoWT myCustomButton"/>
+         <m:Input value="{searcher>/searchKey}" valueLiveUpdate="true" width="60%"/>
+      </m:content>
+   </m:Panel>
+   <m:Panel class="sapUiResponsiveMargin" width="auto" visible="{searcher>/location/visible}">
+   		<m:content>
+         <m:Text text="Location: {searcher>/location/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+         <m:Text text="Country: {searcher>/location/country}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+         <m:Link
+        	text="Coord: lon:{searcher>/location/coord/lon} lat:{searcher>/location/coord/lat}"
+        	class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"
+        	target="_blank"
+        	href="https://www.google.com.my/maps/@{searcher>/location/coord/lat},{searcher>/location/coord/lon},10z"
+         />
+   		</m:content>
+   </m:Panel>
+</mvc:View>
